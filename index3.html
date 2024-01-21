@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Ingresa tu password</h2>
+    <div>
+        <select name="" id="">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+        <select name="" id="">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+        <select name="" id="">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+    </div>
+    <button>Ingresar</button>
+    <p class="mensaje"></p>
+    
+    <script>
+        const btn = document.querySelector("button")
+        const mensaje = document.querySelector(".mensaje")
+
+        btn.addEventListener ("click", () => {
+
+            const listaSelects = document.querySelectorAll ("select")
+
+            let value1 = listaSelects [1].value
+            let value2 = listaSelects [1].value
+            let value3 = listaSelects [1].value
+            const [{value: a}, {value: b},{value: c}] = document.querySelectorAll("select")
+
+            console.log("VALUE 1 @@@", value1)
+            console.log("VALUE 1 @@@", value2)
+            console.log("VALUE 1 @@@", value3)
+
+            console.log("VALUE 1", a)
+            console.log("VALUE 1", b)
+            console.log("VALUE 1", c)
+            
+            console.log(document.querySelectorAll ("select"))
+
+            let password = a + b + c
+
+            if(password==="911"){
+                mensaje.innerHTML ="Password 1 es correcto"    
+            }
+            else if(password==="714"){
+                mensaje.innerHTML ="Password 2 es correcto"    
+            }
+            else{
+                mensaje.innerHTML ="Password incorrecto"    
+            }
+        })
+    </script>
+    
+</body>
+</html>

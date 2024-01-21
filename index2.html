@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <img src="assets/img/perrito.jpg" alt="" width="200">
+        <input type="text" id="sticker1">
+    </div>
+    <div>
+        <img src="assets/img/perrito2.jpg" alt="" width="200">
+        <input type="text" id="sticker2">
+    </div>
+    <div>
+        <img src="assets/img/perrito3.jpg" alt="" width="200">
+        <input type="text" id="sticker3">
+    </div>
+    <p id="result"> </p>
+    <button onclick="
+    let n1 =Number(document.querySelector('#sticker1').value)
+    let n2 =Number(document.querySelector('#sticker2').value)
+    let n3 =Number(document.querySelector('#sticker3').value)
+    let suma = n1 + n2 + n3
+    let result = document.querySelector('#result')
+    if (suma <=10){
+        result.innerHTML ='Llevas' + ' ' + suma + ' ' + 'stickers'
+    }
+    else{
+        result.innerHTML = 'Llevas demasiados stickers' 
+    }
+    ">Verificar</button>
+</body>
+</html>
